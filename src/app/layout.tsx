@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { NextAuthProvider } from './providers/auth';
+import Header from '../components/Header';
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}><NextAuthProvider>
+      <body className={poppins.className}>
+        <NextAuthProvider>
+          <Header/>
         {children}
       </NextAuthProvider>
       </body>
