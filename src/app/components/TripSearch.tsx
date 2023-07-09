@@ -4,6 +4,7 @@
 import DatePicker from "@/components/DatePicker";
 import Input from "@/components/Input";
 import { useRouter } from "next/navigation";
+import CurrencyInput from "@/components/CurrencyInput";
 import React from "react";
 import Button from "@/components/Button";
 import { Controller, useForm } from "react-hook-form";
@@ -71,9 +72,10 @@ const TripSearch = () => {
           />
         </div>
 
-        <Button onClick={() => handleSubmit(onSubmit)()} className="w-1/2 lg:h-fit">
+        <Button onClick={() => handleSubmit(onSubmit)()} className="w-full">
           Buscar
         </Button>
+
       </div>
     </div>
   );
