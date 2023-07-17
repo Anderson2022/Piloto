@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { NextAuthProvider } from './providers/auth';
 import Header from '../components/Header';
+import Footer from '@/components/Footer';
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 const inter = Inter({ subsets: ['latin'] })
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body className={poppins.className}>
         <NextAuthProvider>
           <Header/>
-        {children}
+          {children}
+          <Footer/>
       </NextAuthProvider>
       </body>
     </html>
